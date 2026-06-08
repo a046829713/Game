@@ -1,0 +1,7 @@
+gcc -shared -o mylib.dll -DMYLIB_EXPORTS -I. mylib.c '-Wl,--out-implib,libmylib.dll.a'
+gcc main.c -o main.exe
+
+gcc -c -D MYLIB_EXPORTS mylib.c -o mylib.o
+
+To excute the exe need to type this command to display chinese.
+chcp 65001 
